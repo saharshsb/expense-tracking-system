@@ -4,6 +4,7 @@
  */
 package ets;
 
+import dbmsconnection.*;
 import java.awt.Insets;
 /**
  *
@@ -16,6 +17,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        Not_a_valid_user.setVisible(false);
     }
 
     /**
@@ -40,6 +42,7 @@ public class Login extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         LoginButton = new javax.swing.JButton();
         SignupButton = new javax.swing.JButton();
+        Not_a_valid_user = new javax.swing.JLabel();
         LoginBackground = new javax.swing.JLabel();
         RegistrationPage = new javax.swing.JPanel();
         RegistrationPanel = new javax.swing.JPanel();
@@ -211,6 +214,12 @@ public class Login extends javax.swing.JFrame {
         jPanel6.add(SignupButton);
 
         LoginPanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 385, 300, 103));
+
+        Not_a_valid_user.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Not_a_valid_user.setForeground(new java.awt.Color(255, 0, 0));
+        Not_a_valid_user.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Not_a_valid_user.setText("Not a valid User");
+        LoginPanel.add(Not_a_valid_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 300, -1));
 
         LoginPage.add(LoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, -1, -1));
 
@@ -844,19 +853,40 @@ public class Login extends javax.swing.JFrame {
     private void BackToLoginButttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToLoginButttonActionPerformed
         RegistrationPage.setVisible(false);
         LoginPage.setVisible(true);
+        LoginUsernameField.setText(null);
+        LoginPasswordField.setText(null);
+        Not_a_valid_user.setVisible(false);
         Dashboard.setVisible(false);
     }//GEN-LAST:event_BackToLoginButttonActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        LoginPage.setVisible(false);
-        RegistrationPage.setVisible(false);
-        Dashboard.setVisible(true);
+        String Username=LoginUsernameField.getText();
+        String Password=new String(LoginPasswordField.getPassword());
+        int found=0;
+        found=DBMS_CONNECTION.dbms_connection_check(Username,Password);
+        if(found==1){
+            LoginPage.setVisible(false);
+            RegistrationPage.setVisible(false);
+            Dashboard.setVisible(true);
+        }
+        else{
+            Not_a_valid_user.setVisible(true);
+        }
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
-        LoginPage.setVisible(false);
-        RegistrationPage.setVisible(false);
-        Dashboard.setVisible(true);
+        String Username=UsernameField.getText();
+        String Name=NameField.getText();
+        String Email=EmailField.getText();
+        String Password=new String(PasswordField.getPassword());
+        String ConPassword=new String(ConfirmPasswordField.getPassword());
+        if(Password.equals(ConPassword)){
+            DBMS_SIGNUP.dbms_signups(Username,Email,Name,Password);
+            LoginPage.setVisible(false);
+            RegistrationPage.setVisible(false);
+            Dashboard.setVisible(true);
+        }
+        
     }//GEN-LAST:event_SignUpButtonActionPerformed
 
     private void AnalyticsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnalyticsButtonActionPerformed
@@ -939,6 +969,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField LoginUsernameField;
     private javax.swing.JLabel Name;
     private javax.swing.JTextField NameField;
+    private javax.swing.JLabel Not_a_valid_user;
     private javax.swing.JLabel Password;
     private javax.swing.JPasswordField PasswordField;
     private javax.swing.JLabel RegistrationBackground;
