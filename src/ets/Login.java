@@ -191,7 +191,7 @@ public class Login extends javax.swing.JFrame {
         jPanel6.setOpaque(false);
         jPanel6.setLayout(new java.awt.GridLayout(0, 1, 0, 20));
 
-        LoginButton.setBackground(new java.awt.Color(0, 0, 0));
+        LoginButton.setBackground(new java.awt.Color(0, 255, 204));
         LoginButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setText("Log in");
