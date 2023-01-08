@@ -69,6 +69,17 @@ public class Login extends javax.swing.JFrame {
         AnalyticsButton = new javax.swing.JButton();
         SettingsButton = new javax.swing.JButton();
         SignoutButton = new javax.swing.JButton();
+        HomePanel = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        InfoBarPanel = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        LogPanel = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         RegistrationPage2 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
@@ -346,12 +357,12 @@ public class Login extends javax.swing.JFrame {
         jPanel10.setBorder(new RoundedBorder(30));
         jPanel10.setForeground(new java.awt.Color(204, 204, 204));
         jPanel10.setToolTipText("");
-        jPanel10.setOpaque(false);
         jPanel10.setPreferredSize(new java.awt.Dimension(400, 600));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(new RoundedBorder2(25));
         jPanel1.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.setOpaque(false);
 
         jPanel13.setBackground(new java.awt.Color(255, 102, 102));
         jPanel13.setOpaque(false);
@@ -364,6 +375,11 @@ public class Login extends javax.swing.JFrame {
         HomeButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         HomeButton.setOpaque(false);
+        HomeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeButtonActionPerformed(evt);
+            }
+        });
         jPanel13.add(HomeButton);
 
         LogButton.setBackground(new java.awt.Color(230, 230, 230));
@@ -373,6 +389,11 @@ public class Login extends javax.swing.JFrame {
         LogButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         LogButton.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         LogButton.setOpaque(false);
+        LogButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogButtonActionPerformed(evt);
+            }
+        });
         jPanel13.add(LogButton);
 
         AnalyticsButton.setBackground(new java.awt.Color(230, 230, 230));
@@ -432,6 +453,152 @@ public class Login extends javax.swing.JFrame {
         );
 
         jPanel10.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 180, 600));
+
+        HomePanel.setBackground(new java.awt.Color(255, 0, 255));
+        HomePanel.setForeground(new java.awt.Color(204, 0, 204));
+        HomePanel.setOpaque(false);
+
+        jPanel2.setOpaque(false);
+
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 60)); // NOI18N
+        jLabel1.setText("Welcome back, @user!");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        InfoBarPanel.setOpaque(false);
+        InfoBarPanel.setLayout(new java.awt.GridLayout(1, 0, 30, 0));
+
+        jPanel11.setBorder(new RoundedBorder3(30));
+        jPanel11.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel11.setOpaque(false);
+
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setText("<html>Income this month:<br>Rs. 2571<html>");
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        InfoBarPanel.add(jPanel11);
+
+        jPanel12.setBorder(new RoundedBorder4(30));
+        jPanel12.setOpaque(false);
+
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel3.setText("<html>Spending this month:<br>Rs. 1430<html>");
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        InfoBarPanel.add(jPanel12);
+
+        jPanel23.setBorder(new RoundedBorder5(30));
+        jPanel23.setOpaque(false);
+
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel4.setText("<html>Balance for this month:<br>Rs. 1141<html>");
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        InfoBarPanel.add(jPanel23);
+
+        javax.swing.GroupLayout HomePanelLayout = new javax.swing.GroupLayout(HomePanel);
+        HomePanel.setLayout(HomePanelLayout);
+        HomePanelLayout.setHorizontalGroup(
+            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(InfoBarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE))
+        );
+        HomePanelLayout.setVerticalGroup(
+            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomePanelLayout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(InfoBarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 401, Short.MAX_VALUE))
+        );
+
+        jPanel10.add(HomePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 730, 600));
+
+        LogPanel.setBackground(new java.awt.Color(255, 204, 0));
+        LogPanel.setForeground(new java.awt.Color(204, 0, 204));
+        LogPanel.setOpaque(false);
+
+        javax.swing.GroupLayout LogPanelLayout = new javax.swing.GroupLayout(LogPanel);
+        LogPanel.setLayout(LogPanelLayout);
+        LogPanelLayout.setHorizontalGroup(
+            LogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        LogPanelLayout.setVerticalGroup(
+            LogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        jPanel10.add(LogPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 760, 600));
 
         Dashboard.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 1020, 660));
 
@@ -658,7 +825,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LayoutManager, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LayoutManager, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1094, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -701,6 +868,16 @@ public class Login extends javax.swing.JFrame {
         RegistrationPage.setVisible(false);
         Dashboard.setVisible(false);
     }//GEN-LAST:event_SignoutButtonActionPerformed
+
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+        HomePanel.setVisible(true);
+        LogPanel.setVisible(false);
+    }//GEN-LAST:event_HomeButtonActionPerformed
+
+    private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogButtonActionPerformed
+        LogPanel.setVisible(true);
+        HomePanel.setVisible(false);
+    }//GEN-LAST:event_LogButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -746,8 +923,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Email;
     private javax.swing.JTextField EmailField;
     private javax.swing.JButton HomeButton;
+    private javax.swing.JPanel HomePanel;
+    private javax.swing.JPanel InfoBarPanel;
     private javax.swing.JPanel LayoutManager;
     private javax.swing.JButton LogButton;
+    private javax.swing.JPanel LogPanel;
     private javax.swing.JLabel LoginBackground;
     private javax.swing.JButton LoginButton;
     private javax.swing.JLabel LoginHeading;
@@ -778,6 +958,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -786,10 +967,15 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
@@ -797,9 +983,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
