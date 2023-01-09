@@ -18,7 +18,7 @@ public class DBMS_CONNECTION {
     public static int dbms_connection_check(String Username,String Password){
         int found=0;
         try{
-            
+           Class.forName("com.mysql.jdbc.Driver");  
            Connection con = DriverManager.getConnection(  
                     "jdbc:mysql://localhost:3306/ets","root","tiger");
            Statement stmt=con.createStatement();

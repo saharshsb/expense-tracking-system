@@ -877,13 +877,13 @@ public class Login extends javax.swing.JFrame {
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
         int found=0;
-        String Username=UsernameField.getText();
-        String Name=NameField.getText();
-        String Email=EmailField.getText();
-        String Password=new String(PasswordField.getPassword());
+        String Username_string=UsernameField.getText();
+        String Name_string=NameField.getText();
+        String Email_string=EmailField.getText();
+        String Password_string=new String(PasswordField.getPassword());
         String ConPassword=new String(ConfirmPasswordField.getPassword());
         while(found==0){
-        if(Username.isEmpty()||Name.isEmpty()||Email.isEmpty()||Password.isEmpty()||ConPassword.isEmpty())
+        if(Username_string.isEmpty()||Name_string.isEmpty()||Email_string.isEmpty()||Password_string.isEmpty()||ConPassword.isEmpty())
         {
             found=1;
             jLabel5.setText("Registration Incomplete!!");
@@ -892,9 +892,9 @@ public class Login extends javax.swing.JFrame {
          if(found==0)
          {
            
-          if(Password.equals(ConPassword)){
+          if(Password_string.equals(ConPassword)){
                 
-            DBMS_SIGNUP.dbms_signups(Username,Email,Name,Password);
+            DBMS_SIGNUP.dbms_signups(Username_string,Email_string,Name_string,Password_string);
             LoginPage.setVisible(false);
             RegistrationPage.setVisible(false);
             Dashboard.setVisible(true);
