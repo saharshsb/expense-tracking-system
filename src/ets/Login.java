@@ -73,6 +73,25 @@ public class Login extends javax.swing.JFrame {
         AnalyticsButton = new javax.swing.JButton();
         SettingsButton = new javax.swing.JButton();
         SignoutButton = new javax.swing.JButton();
+        LogPanel = new javax.swing.JPanel();
+        TablePanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        InfoEditPanel = new javax.swing.JPanel();
+        AddInfoButton = new javax.swing.JButton();
+        DeleteInfoButton = new javax.swing.JButton();
+        EditInfoButton = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        LoginUsernameField5 = new javax.swing.JTextField();
+        LoginUsernameField2 = new javax.swing.JTextField();
+        LoginUsernameField3 = new javax.swing.JTextField();
+        LoginUsernameField4 = new javax.swing.JTextField();
+        LoginUsernameField6 = new javax.swing.JTextField();
         HomePanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -83,7 +102,6 @@ public class Login extends javax.swing.JFrame {
         EXPENSE_LABEL = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         SAVINGS_LABEL = new javax.swing.JLabel();
-        LogPanel = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         RegistrationPage2 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
@@ -119,6 +137,7 @@ public class Login extends javax.swing.JFrame {
         setTitle("Expense Tracking System");
         setAlwaysOnTop(true);
         setName("Frame1"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1094, 756));
         setResizable(false);
         setSize(new java.awt.Dimension(1080, 720));
 
@@ -465,6 +484,160 @@ public class Login extends javax.swing.JFrame {
 
         jPanel10.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 180, 600));
 
+        LogPanel.setBackground(new java.awt.Color(255, 204, 0));
+        LogPanel.setForeground(new java.awt.Color(204, 0, 204));
+        LogPanel.setOpaque(false);
+        LogPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TablePanel.setOpaque(false);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Type", "Category", "Name", "Amount", "Date"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout TablePanelLayout = new javax.swing.GroupLayout(TablePanel);
+        TablePanel.setLayout(TablePanelLayout);
+        TablePanelLayout.setHorizontalGroup(
+            TablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+        );
+        TablePanelLayout.setVerticalGroup(
+            TablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TablePanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+
+        LogPanel.add(TablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 700, 370));
+
+        InfoEditPanel.setOpaque(false);
+        InfoEditPanel.setLayout(new java.awt.GridLayout(1, 0, 30, 0));
+
+        AddInfoButton.setBackground(new java.awt.Color(255, 255, 255));
+        AddInfoButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
+        AddInfoButton.setForeground(new java.awt.Color(51, 153, 0));
+        AddInfoButton.setText("Add");
+        AddInfoButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 153, 0), 3, true));
+        AddInfoButton.setOpaque(false);
+        AddInfoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddInfoButtonActionPerformed(evt);
+            }
+        });
+        InfoEditPanel.add(AddInfoButton);
+
+        DeleteInfoButton.setBackground(new java.awt.Color(255, 255, 255));
+        DeleteInfoButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
+        DeleteInfoButton.setForeground(new java.awt.Color(255, 0, 0));
+        DeleteInfoButton.setText("Delete");
+        DeleteInfoButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
+        DeleteInfoButton.setOpaque(false);
+        DeleteInfoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteInfoButtonActionPerformed(evt);
+            }
+        });
+        InfoEditPanel.add(DeleteInfoButton);
+
+        EditInfoButton.setBackground(new java.awt.Color(255, 255, 255));
+        EditInfoButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
+        EditInfoButton.setForeground(new java.awt.Color(153, 153, 255));
+        EditInfoButton.setText("Edit");
+        EditInfoButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 255), 3, true));
+        EditInfoButton.setOpaque(false);
+        EditInfoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditInfoButtonActionPerformed(evt);
+            }
+        });
+        InfoEditPanel.add(EditInfoButton);
+
+        LogPanel.add(InfoEditPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, 390, 40));
+
+        jPanel4.setOpaque(false);
+        jPanel4.setLayout(new java.awt.GridLayout(2, 0, 20, 0));
+
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel6.setText("Type (E/I)");
+        jPanel4.add(jLabel6);
+
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel2.setText("Category");
+        jPanel4.add(jLabel2);
+
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel7.setText("Name");
+        jPanel4.add(jLabel7);
+
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel3.setText("Amount");
+        jPanel4.add(jLabel3);
+
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel4.setText("Date");
+        jPanel4.add(jLabel4);
+
+        LoginUsernameField5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField5.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField5.setToolTipText("");
+        LoginUsernameField5.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField5.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField5.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField5);
+
+        LoginUsernameField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField2.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField2.setToolTipText("");
+        LoginUsernameField2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField2.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField2.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField2);
+
+        LoginUsernameField3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField3.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField3.setToolTipText("");
+        LoginUsernameField3.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField3.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField3.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField3);
+
+        LoginUsernameField4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField4.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField4.setToolTipText("");
+        LoginUsernameField4.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField4.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField4.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField4);
+
+        LoginUsernameField6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField6.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField6.setToolTipText("");
+        LoginUsernameField6.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField6.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField6.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField6);
+
+        LogPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 700, 70));
+
+        jPanel10.add(LogPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 760, 600));
+
         HomePanel.setBackground(new java.awt.Color(255, 0, 255));
         HomePanel.setForeground(new java.awt.Color(204, 0, 204));
         HomePanel.setOpaque(false);
@@ -593,23 +766,6 @@ public class Login extends javax.swing.JFrame {
         );
 
         jPanel10.add(HomePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 730, 600));
-
-        LogPanel.setBackground(new java.awt.Color(255, 204, 0));
-        LogPanel.setForeground(new java.awt.Color(204, 0, 204));
-        LogPanel.setOpaque(false);
-
-        javax.swing.GroupLayout LogPanelLayout = new javax.swing.GroupLayout(LogPanel);
-        LogPanel.setLayout(LogPanelLayout);
-        LogPanelLayout.setHorizontalGroup(
-            LogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-        );
-        LogPanelLayout.setVerticalGroup(
-            LogPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-
-        jPanel10.add(LogPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 760, 600));
 
         Dashboard.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 1020, 660));
 
@@ -872,8 +1028,17 @@ public class Login extends javax.swing.JFrame {
             LoginPage.setVisible(false);
             RegistrationPage.setVisible(false);
             Dashboard.setVisible(true);
+<<<<<<< HEAD
             income=DBMS_EXPENSE.dbms_income_cal(Username_string);
             expense=DBMS_EXPENSE.dbms_expense_cal(Username_string);
+=======
+            
+            HomePanel.setVisible(true);
+            LogPanel.setVisible(false);
+        
+            income=DBMS_EXPENSE.dbms_income_cal(Username);
+            expense=DBMS_EXPENSE.dbms_expense_cal(Username);
+>>>>>>> 7dda92541d2147c0eed5dce1b20c001567be1c7c
             EXPENSE_LABEL.setText("Expense this \nMonth:\n"+expense);
             INCOME_LABEL.setText("Income this \nMonth:\n"+income);
             if(income>=expense){
@@ -912,6 +1077,10 @@ public class Login extends javax.swing.JFrame {
             LoginPage.setVisible(false);
             RegistrationPage.setVisible(false);
             Dashboard.setVisible(true);
+            
+            HomePanel.setVisible(true);
+            LogPanel.setVisible(false);
+        
             break;
             }
          }
@@ -938,6 +1107,18 @@ public class Login extends javax.swing.JFrame {
         LogPanel.setVisible(true);
         HomePanel.setVisible(false);
     }//GEN-LAST:event_LogButtonActionPerformed
+
+    private void AddInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddInfoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddInfoButtonActionPerformed
+
+    private void DeleteInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteInfoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DeleteInfoButtonActionPerformed
+
+    private void EditInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditInfoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditInfoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -975,18 +1156,22 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddInfoButton;
     private javax.swing.JButton AnalyticsButton;
     private javax.swing.JButton BackToLoginButtton;
     private javax.swing.JLabel ConfirmPassword;
     private javax.swing.JPasswordField ConfirmPasswordField;
     private javax.swing.JPanel Dashboard;
+    private javax.swing.JButton DeleteInfoButton;
     private javax.swing.JLabel EXPENSE_LABEL;
+    private javax.swing.JButton EditInfoButton;
     private javax.swing.JLabel Email;
     private javax.swing.JTextField EmailField;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel HomePanel;
     private javax.swing.JLabel INCOME_LABEL;
     private javax.swing.JPanel InfoBarPanel;
+    private javax.swing.JPanel InfoEditPanel;
     private javax.swing.JPanel LayoutManager;
     private javax.swing.JButton LogButton;
     private javax.swing.JPanel LogPanel;
@@ -999,6 +1184,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField LoginPasswordField;
     private javax.swing.JLabel LoginUsername;
     private javax.swing.JTextField LoginUsernameField;
+    private javax.swing.JTextField LoginUsernameField2;
+    private javax.swing.JTextField LoginUsernameField3;
+    private javax.swing.JTextField LoginUsernameField4;
+    private javax.swing.JTextField LoginUsernameField5;
+    private javax.swing.JTextField LoginUsernameField6;
     private javax.swing.JLabel Name;
     private javax.swing.JTextField NameField;
     private javax.swing.JLabel Not_a_valid_user;
@@ -1016,6 +1206,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton SignUpButton;
     private javax.swing.JButton SignoutButton;
     private javax.swing.JButton SignupButton;
+    private javax.swing.JPanel TablePanel;
     private javax.swing.JLabel Username;
     private javax.swing.JTextField UsernameField;
     private javax.swing.JButton jButton10;
@@ -1031,9 +1222,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1051,6 +1247,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -1058,6 +1255,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField4;
     private javax.swing.JPasswordField jPasswordField5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
