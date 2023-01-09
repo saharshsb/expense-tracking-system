@@ -21,15 +21,15 @@ public class DBMS_EXPENSE {
         
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");  
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ets","root","Arrive#1");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
            Statement stmt=con.createStatement();
            LocalDate currentDate= LocalDate.now();
            int month = currentDate.getMonthValue();
            System.out.println(month);
-           ResultSet rs= stmt.executeQuery("select sum(Expense_amount) from expense where Username='"+Username+"' and extract(month from Time_stamp)=extract(month from CURDATE())");
+           ResultSet rs= stmt.executeQuery("select sum(transaction_amount) from transaction where Username='"+Username+"' and type='E' and extract(month from transaction_date)=extract(month from CURDATE())");
            while(rs.next()){
                System.out.println("Entered");
-               return rs.getInt("SUM(EXPENSE_AMOUNT)");
+               return rs.getInt("SUM(TRANSACTION_AMOUNT)");
            }
         }
         catch(ClassNotFoundException | SQLException e){
@@ -49,10 +49,10 @@ public class DBMS_EXPENSE {
            LocalDate currentDate= LocalDate.now();
            int month = currentDate.getMonthValue();
            System.out.println(month);
-           ResultSet rs= stmt.executeQuery("select sum(income_amount) from income where Username='"+Username+"' and extract(month from Time_stamp)=extract(month from CURDATE())");
+           ResultSet rs= stmt.executeQuery("select sum(transaction_amount) from transaction where Username='"+Username+"' and type='I' and extract(month from Transaction_date)=extract(month from CURDATE())");
            while(rs.next()){
                System.out.println("Entered");
-               return rs.getInt("SUM(INCOME_AMOUNT)");
+               return rs.getInt("SUM(TRANSACTION_AMOUNT)");
            }
         }
         catch(ClassNotFoundException | SQLException e){

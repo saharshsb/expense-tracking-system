@@ -73,16 +73,6 @@ public class Login extends javax.swing.JFrame {
         AnalyticsButton = new javax.swing.JButton();
         SettingsButton = new javax.swing.JButton();
         SignoutButton = new javax.swing.JButton();
-        HomePanel = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        WelcomeHeading = new javax.swing.JLabel();
-        InfoBarPanel = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        INCOME_LABEL = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        EXPENSE_LABEL = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
-        SAVINGS_LABEL = new javax.swing.JLabel();
         LogPanel = new javax.swing.JPanel();
         TablePanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -102,6 +92,16 @@ public class Login extends javax.swing.JFrame {
         ExpNameField = new javax.swing.JTextField();
         AmountField = new javax.swing.JTextField();
         ExpDateField = new javax.swing.JTextField();
+        HomePanel = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        WelcomeHeading = new javax.swing.JLabel();
+        InfoBarPanel = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        INCOME_LABEL = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        EXPENSE_LABEL = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        SAVINGS_LABEL = new javax.swing.JLabel();
         SettingsPanel = new javax.swing.JPanel();
         jPanel24 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -471,135 +471,6 @@ public class Login extends javax.swing.JFrame {
 
         jPanel10.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 180, 600));
 
-        HomePanel.setBackground(new java.awt.Color(255, 0, 255));
-        HomePanel.setForeground(new java.awt.Color(204, 0, 204));
-        HomePanel.setOpaque(false);
-
-        jPanel2.setOpaque(false);
-
-        WelcomeHeading.setFont(new java.awt.Font("Berlin Sans FB", 0, 60)); // NOI18N
-        WelcomeHeading.setText("Welcome back, @user!");
-        WelcomeHeading.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(WelcomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(WelcomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        InfoBarPanel.setOpaque(false);
-        InfoBarPanel.setLayout(new java.awt.GridLayout(1, 0, 30, 0));
-
-        jPanel11.setBorder(new RoundedBorder3(30));
-        jPanel11.setForeground(new java.awt.Color(102, 102, 102));
-        jPanel11.setOpaque(false);
-
-        INCOME_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
-        INCOME_LABEL.setForeground(new java.awt.Color(255, 255, 255));
-        INCOME_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        INCOME_LABEL.setText("<html>Income this month:<br>Rs. 2571<html>");
-        INCOME_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addComponent(INCOME_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addComponent(INCOME_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        InfoBarPanel.add(jPanel11);
-
-        jPanel12.setBorder(new RoundedBorder4(30));
-        jPanel12.setOpaque(false);
-
-        EXPENSE_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
-        EXPENSE_LABEL.setForeground(new java.awt.Color(255, 255, 255));
-        EXPENSE_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        EXPENSE_LABEL.setText("<html>Spending this month:<br>Rs. 1430<html>");
-        EXPENSE_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addComponent(EXPENSE_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addComponent(EXPENSE_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        InfoBarPanel.add(jPanel12);
-
-        jPanel23.setBorder(new RoundedBorder5(30));
-        jPanel23.setOpaque(false);
-
-        SAVINGS_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
-        SAVINGS_LABEL.setForeground(new java.awt.Color(255, 255, 255));
-        SAVINGS_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        SAVINGS_LABEL.setText("<html>Balance for this month:<br>Rs. 1141<html>");
-        SAVINGS_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addComponent(SAVINGS_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addComponent(SAVINGS_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        InfoBarPanel.add(jPanel23);
-
-        javax.swing.GroupLayout HomePanelLayout = new javax.swing.GroupLayout(HomePanel);
-        HomePanel.setLayout(HomePanelLayout);
-        HomePanelLayout.setHorizontalGroup(
-            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(InfoBarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE))
-        );
-        HomePanelLayout.setVerticalGroup(
-            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomePanelLayout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InfoBarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 398, Short.MAX_VALUE))
-        );
-
-        jPanel10.add(HomePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 730, 600));
-
         LogPanel.setBackground(new java.awt.Color(255, 204, 0));
         LogPanel.setForeground(new java.awt.Color(204, 0, 204));
         LogPanel.setOpaque(false);
@@ -754,6 +625,135 @@ public class Login extends javax.swing.JFrame {
 
         LogPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 700, 70));
 
+        HomePanel.setBackground(new java.awt.Color(255, 0, 255));
+        HomePanel.setForeground(new java.awt.Color(204, 0, 204));
+        HomePanel.setOpaque(false);
+
+        jPanel2.setOpaque(false);
+
+        WelcomeHeading.setFont(new java.awt.Font("Berlin Sans FB", 0, 60)); // NOI18N
+        WelcomeHeading.setText("Welcome back, @user!");
+        WelcomeHeading.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(WelcomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(WelcomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        InfoBarPanel.setOpaque(false);
+        InfoBarPanel.setLayout(new java.awt.GridLayout(1, 0, 30, 0));
+
+        jPanel11.setBorder(new RoundedBorder3(30));
+        jPanel11.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel11.setOpaque(false);
+
+        INCOME_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        INCOME_LABEL.setForeground(new java.awt.Color(255, 255, 255));
+        INCOME_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        INCOME_LABEL.setText("<html>Income this month:<br>Rs. 2571<html>");
+        INCOME_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addComponent(INCOME_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addComponent(INCOME_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        InfoBarPanel.add(jPanel11);
+
+        jPanel12.setBorder(new RoundedBorder4(30));
+        jPanel12.setOpaque(false);
+
+        EXPENSE_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        EXPENSE_LABEL.setForeground(new java.awt.Color(255, 255, 255));
+        EXPENSE_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EXPENSE_LABEL.setText("<html>Spending this month:<br>Rs. 1430<html>");
+        EXPENSE_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addComponent(EXPENSE_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(EXPENSE_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        InfoBarPanel.add(jPanel12);
+
+        jPanel23.setBorder(new RoundedBorder5(30));
+        jPanel23.setOpaque(false);
+
+        SAVINGS_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        SAVINGS_LABEL.setForeground(new java.awt.Color(255, 255, 255));
+        SAVINGS_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        SAVINGS_LABEL.setText("<html>Balance for this month:<br>Rs. 1141<html>");
+        SAVINGS_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addComponent(SAVINGS_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addComponent(SAVINGS_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        InfoBarPanel.add(jPanel23);
+
+        javax.swing.GroupLayout HomePanelLayout = new javax.swing.GroupLayout(HomePanel);
+        HomePanel.setLayout(HomePanelLayout);
+        HomePanelLayout.setHorizontalGroup(
+            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(InfoBarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE))
+        );
+        HomePanelLayout.setVerticalGroup(
+            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomePanelLayout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(InfoBarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 398, Short.MAX_VALUE))
+        );
+
+        LogPanel.add(HomePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, -1, 600));
+
         jPanel10.add(LogPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 760, 600));
 
         SettingsPanel.setBackground(new java.awt.Color(255, 0, 255));
@@ -822,9 +822,7 @@ public class Login extends javax.swing.JFrame {
         ConfirmNewPasswordField.setSelectionColor(new java.awt.Color(204, 204, 204));
         jPanel25.add(ConfirmNewPasswordField);
 
-        ChangePasswordButton.setBackground(new java.awt.Color(255, 255, 255));
         ChangePasswordButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
-        ChangePasswordButton.setForeground(new java.awt.Color(0, 0, 0));
         ChangePasswordButton.setText("Change");
         ChangePasswordButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         ChangePasswordButton.setOpaque(true);
@@ -883,7 +881,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(RegistrationPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2178, Short.MAX_VALUE))
+                .addGap(0, 2183, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1013,9 +1011,13 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_LogButtonActionPerformed
 
     private void AddInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddInfoButtonActionPerformed
-        
-       
-        
+        String type_string=TypeField.getText();
+        String Category_string=CategoryField.getText();
+        String Name_string=ExpNameField.getText();
+        String Amount_string=AmountField.getText();
+        String Date_string=ExpDateField.getText();
+        String Username_string=LoginUsernameField.getText();
+        DBMS_ADD.dbms_add_transact(Username_string,type_string,Category_string,Name_string,Amount_string,Date_string);  
     }//GEN-LAST:event_AddInfoButtonActionPerformed
 
     private void DeleteInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteInfoButtonActionPerformed
