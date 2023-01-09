@@ -970,25 +970,21 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="0" y="220" width="680" height="180"/>
+                          <AbsoluteConstraints x="30" y="30" width="700" height="370"/>
                         </Constraint>
                       </Constraints>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" pref="621" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jScrollPane1" alignment="0" pref="700" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jScrollPane1" min="-2" pref="199" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="368" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="2" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1036,6 +1032,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="AddInfoButton">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="22" style="0"/>
                             </Property>
@@ -1060,6 +1059,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="DeleteInfoButton">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="22" style="0"/>
                             </Property>
@@ -1084,6 +1086,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="EditInfoButton">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="22" style="0"/>
                             </Property>
@@ -1124,7 +1129,7 @@
                         <Property name="rows" type="int" value="2"/>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="TYPE">
+                        <Component class="javax.swing.JLabel" name="jLabel6">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="18" style="0"/>
@@ -1164,41 +1169,7 @@
                             <Property name="text" type="java.lang.String" value="Date"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="Typefield">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Berlin Sans FB" size="18" style="0"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                            </Property>
-                            <Property name="toolTipText" type="java.lang.String" value=""/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
-                                <CompoundBorder>
-                                  <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                    <LineBorder roundedCorners="true" thickness="3">
-                                      <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
-                                    </LineBorder>
-                                  </Border>
-                                  <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                                    <EmptyBorder bottom="1" left="6" right="1" top="1"/>
-                                  </Border>
-                                </CompoundBorder>
-                              </Border>
-                            </Property>
-                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-                              <Insets value="[2, 50, 2, 6]"/>
-                            </Property>
-                            <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                            </Property>
-                          </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TypefieldActionPerformed"/>
-                          </Events>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="CategoryField">
+                        <Component class="javax.swing.JTextField" name="LoginUsernameField5">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="18" style="0"/>
@@ -1229,7 +1200,7 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="ExpNameField">
+                        <Component class="javax.swing.JTextField" name="LoginUsernameField2">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="18" style="0"/>
@@ -1260,7 +1231,7 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="AmountField">
+                        <Component class="javax.swing.JTextField" name="LoginUsernameField3">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="18" style="0"/>
@@ -1291,7 +1262,38 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="ExpDateField">
+                        <Component class="javax.swing.JTextField" name="LoginUsernameField4">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Berlin Sans FB" size="18" style="0"/>
+                            </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                            </Property>
+                            <Property name="toolTipText" type="java.lang.String" value=""/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                                <CompoundBorder>
+                                  <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                    <LineBorder roundedCorners="true" thickness="3">
+                                      <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                    </LineBorder>
+                                  </Border>
+                                  <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                                    <EmptyBorder bottom="1" left="6" right="1" top="1"/>
+                                  </Border>
+                                </CompoundBorder>
+                              </Border>
+                            </Property>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 50, 2, 6]"/>
+                            </Property>
+                            <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="LoginUsernameField6">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Berlin Sans FB" size="18" style="0"/>

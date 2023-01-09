@@ -4,15 +4,8 @@
  */
 package ets;
 
-import dbmsconnection.DBMS_ADD;
 import dbmsconnection.*;
 import java.awt.Insets;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author sahar
@@ -89,16 +82,16 @@ public class Login extends javax.swing.JFrame {
         DeleteInfoButton = new javax.swing.JButton();
         EditInfoButton = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        TYPE = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        Typefield = new javax.swing.JTextField();
-        CategoryField = new javax.swing.JTextField();
-        ExpNameField = new javax.swing.JTextField();
-        AmountField = new javax.swing.JTextField();
-        ExpDateField = new javax.swing.JTextField();
+        LoginUsernameField5 = new javax.swing.JTextField();
+        LoginUsernameField2 = new javax.swing.JTextField();
+        LoginUsernameField3 = new javax.swing.JTextField();
+        LoginUsernameField4 = new javax.swing.JTextField();
+        LoginUsernameField6 = new javax.swing.JTextField();
         HomePanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -523,23 +516,21 @@ public class Login extends javax.swing.JFrame {
         TablePanel.setLayout(TablePanelLayout);
         TablePanelLayout.setHorizontalGroup(
             TablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TablePanelLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
-                .addGap(17, 17, 17))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
         TablePanelLayout.setVerticalGroup(
             TablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablePanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
-        LogPanel.add(TablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 680, 180));
+        LogPanel.add(TablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 700, 370));
 
         InfoEditPanel.setOpaque(false);
         InfoEditPanel.setLayout(new java.awt.GridLayout(1, 0, 30, 0));
 
+        AddInfoButton.setBackground(new java.awt.Color(255, 255, 255));
         AddInfoButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
         AddInfoButton.setForeground(new java.awt.Color(51, 153, 0));
         AddInfoButton.setText("Add");
@@ -552,6 +543,7 @@ public class Login extends javax.swing.JFrame {
         });
         InfoEditPanel.add(AddInfoButton);
 
+        DeleteInfoButton.setBackground(new java.awt.Color(255, 255, 255));
         DeleteInfoButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
         DeleteInfoButton.setForeground(new java.awt.Color(255, 0, 0));
         DeleteInfoButton.setText("Delete");
@@ -564,6 +556,7 @@ public class Login extends javax.swing.JFrame {
         });
         InfoEditPanel.add(DeleteInfoButton);
 
+        EditInfoButton.setBackground(new java.awt.Color(255, 255, 255));
         EditInfoButton.setFont(new java.awt.Font("Berlin Sans FB", 0, 22)); // NOI18N
         EditInfoButton.setForeground(new java.awt.Color(153, 153, 255));
         EditInfoButton.setText("Edit");
@@ -581,9 +574,9 @@ public class Login extends javax.swing.JFrame {
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new java.awt.GridLayout(2, 0, 20, 0));
 
-        TYPE.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        TYPE.setText("Type (E/I)");
-        jPanel4.add(TYPE);
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel6.setText("Type (E/I)");
+        jPanel4.add(jLabel6);
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel2.setText("Category");
@@ -601,50 +594,45 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("Date");
         jPanel4.add(jLabel4);
 
-        Typefield.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        Typefield.setForeground(new java.awt.Color(204, 204, 204));
-        Typefield.setToolTipText("");
-        Typefield.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
-        Typefield.setMargin(new java.awt.Insets(2, 50, 2, 6));
-        Typefield.setSelectionColor(new java.awt.Color(204, 204, 204));
-        Typefield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TypefieldActionPerformed(evt);
-            }
-        });
-        jPanel4.add(Typefield);
+        LoginUsernameField5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField5.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField5.setToolTipText("");
+        LoginUsernameField5.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField5.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField5.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField5);
 
-        CategoryField.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        CategoryField.setForeground(new java.awt.Color(204, 204, 204));
-        CategoryField.setToolTipText("");
-        CategoryField.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
-        CategoryField.setMargin(new java.awt.Insets(2, 50, 2, 6));
-        CategoryField.setSelectionColor(new java.awt.Color(204, 204, 204));
-        jPanel4.add(CategoryField);
+        LoginUsernameField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField2.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField2.setToolTipText("");
+        LoginUsernameField2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField2.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField2.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField2);
 
-        ExpNameField.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        ExpNameField.setForeground(new java.awt.Color(204, 204, 204));
-        ExpNameField.setToolTipText("");
-        ExpNameField.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
-        ExpNameField.setMargin(new java.awt.Insets(2, 50, 2, 6));
-        ExpNameField.setSelectionColor(new java.awt.Color(204, 204, 204));
-        jPanel4.add(ExpNameField);
+        LoginUsernameField3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField3.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField3.setToolTipText("");
+        LoginUsernameField3.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField3.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField3.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField3);
 
-        AmountField.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        AmountField.setForeground(new java.awt.Color(204, 204, 204));
-        AmountField.setToolTipText("");
-        AmountField.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
-        AmountField.setMargin(new java.awt.Insets(2, 50, 2, 6));
-        AmountField.setSelectionColor(new java.awt.Color(204, 204, 204));
-        jPanel4.add(AmountField);
+        LoginUsernameField4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField4.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField4.setToolTipText("");
+        LoginUsernameField4.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField4.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField4.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField4);
 
-        ExpDateField.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        ExpDateField.setForeground(new java.awt.Color(204, 204, 204));
-        ExpDateField.setToolTipText("");
-        ExpDateField.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
-        ExpDateField.setMargin(new java.awt.Insets(2, 50, 2, 6));
-        ExpDateField.setSelectionColor(new java.awt.Color(204, 204, 204));
-        jPanel4.add(ExpDateField);
+        LoginUsernameField6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        LoginUsernameField6.setForeground(new java.awt.Color(204, 204, 204));
+        LoginUsernameField6.setToolTipText("");
+        LoginUsernameField6.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true), javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 1)));
+        LoginUsernameField6.setMargin(new java.awt.Insets(2, 50, 2, 6));
+        LoginUsernameField6.setSelectionColor(new java.awt.Color(204, 204, 204));
+        jPanel4.add(LoginUsernameField6);
 
         LogPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 700, 70));
 
@@ -1040,15 +1028,17 @@ public class Login extends javax.swing.JFrame {
             LoginPage.setVisible(false);
             RegistrationPage.setVisible(false);
             Dashboard.setVisible(true);
+<<<<<<< HEAD
             income=DBMS_EXPENSE.dbms_income_cal(Username_string);
             expense=DBMS_EXPENSE.dbms_expense_cal(Username_string);
-
+=======
             
             HomePanel.setVisible(true);
             LogPanel.setVisible(false);
         
-            income=DBMS_EXPENSE.dbms_income_cal(Username_string);
-            expense=DBMS_EXPENSE.dbms_expense_cal(Username_string);
+            income=DBMS_EXPENSE.dbms_income_cal(Username);
+            expense=DBMS_EXPENSE.dbms_expense_cal(Username);
+>>>>>>> 7dda92541d2147c0eed5dce1b20c001567be1c7c
             EXPENSE_LABEL.setText("Expense this \nMonth:\n"+expense);
             INCOME_LABEL.setText("Income this \nMonth:\n"+income);
             if(income>=expense){
@@ -1063,19 +1053,7 @@ public class Login extends javax.swing.JFrame {
         }
                   
     }//GEN-LAST:event_LoginButtonActionPerformed
-    
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt)
-    {
-      DefaultTableModel dt=(DefaultTableModel)jTable1.getModel();
-      int index=jTable1.getSelectedRow();
-      Typefield.setText(dt.getValueAt(index,0).toString());
-      CategoryField.setText(dt.getValueAt(index,1).toString());
-      ExpNameField.setText(dt.getValueAt(index,2).toString());
-      AmountField.setText(dt.getValueAt(index,3).toString());
-      ExpDateField.setText(dt.getValueAt(index,4).toString());
-      
-    }
-    
+
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
         int found=0;
         String Username_string=UsernameField.getText();
@@ -1131,26 +1109,16 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_LogButtonActionPerformed
 
     private void AddInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddInfoButtonActionPerformed
-        String type_string=Typefield.getText();
-        String Category_string=CategoryField.getText();
-        String Name_string=ExpNameField.getText();
-        String Amount_string=AmountField.getText();
-        String Date_string=ExpDateField.getText();
-        String Username_string=LoginUsernameField.getText();
-        DBMS_ADD.dbms_add_transact(Username_string,type_string,Category_string,Name_string,Amount_string,Date_string);
+        // TODO add your handling code here:
     }//GEN-LAST:event_AddInfoButtonActionPerformed
 
     private void DeleteInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteInfoButtonActionPerformed
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_DeleteInfoButtonActionPerformed
 
     private void EditInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditInfoButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EditInfoButtonActionPerformed
-
-    private void TypefieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypefieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TypefieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1186,14 +1154,11 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddInfoButton;
-    private javax.swing.JTextField AmountField;
     private javax.swing.JButton AnalyticsButton;
     private javax.swing.JButton BackToLoginButtton;
-    private javax.swing.JTextField CategoryField;
     private javax.swing.JLabel ConfirmPassword;
     private javax.swing.JPasswordField ConfirmPasswordField;
     private javax.swing.JPanel Dashboard;
@@ -1202,8 +1167,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton EditInfoButton;
     private javax.swing.JLabel Email;
     private javax.swing.JTextField EmailField;
-    private javax.swing.JTextField ExpDateField;
-    private javax.swing.JTextField ExpNameField;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel HomePanel;
     private javax.swing.JLabel INCOME_LABEL;
@@ -1221,6 +1184,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField LoginPasswordField;
     private javax.swing.JLabel LoginUsername;
     private javax.swing.JTextField LoginUsernameField;
+    private javax.swing.JTextField LoginUsernameField2;
+    private javax.swing.JTextField LoginUsernameField3;
+    private javax.swing.JTextField LoginUsernameField4;
+    private javax.swing.JTextField LoginUsernameField5;
+    private javax.swing.JTextField LoginUsernameField6;
     private javax.swing.JLabel Name;
     private javax.swing.JTextField NameField;
     private javax.swing.JLabel Not_a_valid_user;
@@ -1238,9 +1206,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton SignUpButton;
     private javax.swing.JButton SignoutButton;
     private javax.swing.JButton SignupButton;
-    private javax.swing.JLabel TYPE;
     private javax.swing.JPanel TablePanel;
-    private javax.swing.JTextField Typefield;
     private javax.swing.JLabel Username;
     private javax.swing.JTextField UsernameField;
     private javax.swing.JButton jButton10;
@@ -1262,6 +1228,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
