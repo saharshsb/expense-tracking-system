@@ -19,7 +19,7 @@ public class DBMS_SIGNUP {
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");  
            Connection con = DriverManager.getConnection(  
-                    "jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+                    "jdbc:mysql://localhost:3306/ets","root","tiger");
            Statement stmt=con.createStatement();
            String command="insert into user_details values('"+Username+"','"+name+"','"+email+"')";
            String command2="insert into user values('"+Username+"','"+password+"')";
