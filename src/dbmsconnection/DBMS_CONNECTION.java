@@ -20,7 +20,7 @@ public class DBMS_CONNECTION {
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");  
            Connection con = DriverManager.getConnection(  
-                    "jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+                    "jdbc:mysql://localhost:3306/ets","root","Arrive#1");
            Statement stmt=con.createStatement();
            ResultSet rs= stmt.executeQuery("select * from user");
            while(rs.next()){

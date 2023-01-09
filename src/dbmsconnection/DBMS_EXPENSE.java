@@ -22,7 +22,7 @@ public class DBMS_EXPENSE {
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");  
            Connection con = DriverManager.getConnection(  
-                    "jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+                    "jdbc:mysql://localhost:3306/ets","root","Arrive#1");
            Statement stmt=con.createStatement();
            LocalDate currentDate= LocalDate.now();
            int month = currentDate.getMonthValue();
