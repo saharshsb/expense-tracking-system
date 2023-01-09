@@ -589,7 +589,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(InfoBarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 401, Short.MAX_VALUE))
+                .addGap(0, 398, Short.MAX_VALUE))
         );
 
         jPanel10.add(HomePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 730, 600));
@@ -862,18 +862,18 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_BackToLoginButttonActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        String Username=LoginUsernameField.getText();
-        String Password=new String(LoginPasswordField.getPassword());
+        String Username_string=LoginUsernameField.getText();
+        String Password_string=new String(LoginPasswordField.getPassword());
         int found=0;
         int expense;
         int income;
-        found=DBMS_CONNECTION.dbms_connection_check(Username,Password);
+        found=DBMS_CONNECTION.dbms_connection_check(Username_string,Password_string);
         if(found==1){
             LoginPage.setVisible(false);
             RegistrationPage.setVisible(false);
             Dashboard.setVisible(true);
-            income=DBMS_EXPENSE.dbms_income_cal(Username);
-            expense=DBMS_EXPENSE.dbms_expense_cal(Username);
+            income=DBMS_EXPENSE.dbms_income_cal(Username_string);
+            expense=DBMS_EXPENSE.dbms_expense_cal(Username_string);
             EXPENSE_LABEL.setText("Expense this \nMonth:\n"+expense);
             INCOME_LABEL.setText("Income this \nMonth:\n"+income);
             if(income>=expense){
