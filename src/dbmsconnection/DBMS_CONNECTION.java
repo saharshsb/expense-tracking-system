@@ -19,8 +19,8 @@ public class DBMS_CONNECTION {
         int found=0;
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");  
-           Connection con = DriverManager.getConnection(  
-                    "jdbc:mysql://localhost:3306/ets","root","Arrive#1");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ets","root","Arrive#1");
+
            Statement stmt=con.createStatement();
            ResultSet rs= stmt.executeQuery("select * from user");
            while(rs.next()){
