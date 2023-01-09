@@ -367,6 +367,7 @@ public class Login extends javax.swing.JFrame {
         jPanel10.setBorder(new RoundedBorder(30));
         jPanel10.setForeground(new java.awt.Color(204, 204, 204));
         jPanel10.setToolTipText("");
+        jPanel10.setOpaque(false);
         jPanel10.setPreferredSize(new java.awt.Dimension(400, 600));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

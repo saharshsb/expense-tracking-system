@@ -24,9 +24,9 @@ public class DBMS_SIGNUP {
            String command="insert into user_details values('"+Username+"','"+name+"','"+email+"')";
            String command2="insert into user values('"+Username+"','"+password+"')";
            int i=stmt.executeUpdate(command);
-          
+           int j=stmt.executeUpdate(command2);
            if(i>0){
-               System.out.println("SUCCESFUL");
+               System.out.println("SUCCESSFUL");
            }
            else{
                System.out.println("Fail");
