@@ -78,11 +78,11 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         InfoBarPanel = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        INCOME_LABEL = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        EXPENSE_LABEL = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        SAVINGS_LABEL = new javax.swing.JLabel();
         LogPanel = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         RegistrationPage2 = new javax.swing.JPanel();
@@ -499,24 +499,24 @@ public class Login extends javax.swing.JFrame {
         jPanel11.setForeground(new java.awt.Color(102, 102, 102));
         jPanel11.setOpaque(false);
 
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("<html>Income this month:<br>Rs. 2571<html>");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        INCOME_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        INCOME_LABEL.setForeground(new java.awt.Color(255, 255, 255));
+        INCOME_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        INCOME_LABEL.setText("<html>Income this month:<br>Rs. 2571<html>");
+        INCOME_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addComponent(INCOME_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(INCOME_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -525,24 +525,24 @@ public class Login extends javax.swing.JFrame {
         jPanel12.setBorder(new RoundedBorder4(30));
         jPanel12.setOpaque(false);
 
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("<html>Spending this month:<br>Rs. 1430<html>");
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EXPENSE_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        EXPENSE_LABEL.setForeground(new java.awt.Color(255, 255, 255));
+        EXPENSE_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EXPENSE_LABEL.setText("<html>Spending this month:<br>Rs. 1430<html>");
+        EXPENSE_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addComponent(EXPENSE_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EXPENSE_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -551,24 +551,24 @@ public class Login extends javax.swing.JFrame {
         jPanel23.setBorder(new RoundedBorder5(30));
         jPanel23.setOpaque(false);
 
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("<html>Balance for this month:<br>Rs. 1141<html>");
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        SAVINGS_LABEL.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        SAVINGS_LABEL.setForeground(new java.awt.Color(255, 255, 255));
+        SAVINGS_LABEL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        SAVINGS_LABEL.setText("<html>Balance for this month:<br>Rs. 1141<html>");
+        SAVINGS_LABEL.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addComponent(SAVINGS_LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SAVINGS_LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -865,15 +865,28 @@ public class Login extends javax.swing.JFrame {
         String Username=LoginUsernameField.getText();
         String Password=new String(LoginPasswordField.getPassword());
         int found=0;
+        int expense;
+        int income;
         found=DBMS_CONNECTION.dbms_connection_check(Username,Password);
         if(found==1){
             LoginPage.setVisible(false);
             RegistrationPage.setVisible(false);
             Dashboard.setVisible(true);
+            income=DBMS_EXPENSE.dbms_income_cal(Username);
+            expense=DBMS_EXPENSE.dbms_expense_cal(Username);
+            EXPENSE_LABEL.setText("Expense this \nMonth:\n"+expense);
+            INCOME_LABEL.setText("Income this \nMonth:\n"+income);
+            if(income>=expense){
+                SAVINGS_LABEL.setText("Savings this Month"+(income-expense));
+            }
+            else{
+                SAVINGS_LABEL.setText("Debt this Month"+(expense-income));
+            }
         }
         else{
             Not_a_valid_user.setVisible(true);
         }
+                  
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
@@ -967,10 +980,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel ConfirmPassword;
     private javax.swing.JPasswordField ConfirmPasswordField;
     private javax.swing.JPanel Dashboard;
+    private javax.swing.JLabel EXPENSE_LABEL;
     private javax.swing.JLabel Email;
     private javax.swing.JTextField EmailField;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel HomePanel;
+    private javax.swing.JLabel INCOME_LABEL;
     private javax.swing.JPanel InfoBarPanel;
     private javax.swing.JPanel LayoutManager;
     private javax.swing.JButton LogButton;
@@ -996,6 +1011,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel RegistrationPage3;
     private javax.swing.JPanel RegistrationPage4;
     private javax.swing.JPanel RegistrationPanel;
+    private javax.swing.JLabel SAVINGS_LABEL;
     private javax.swing.JButton SettingsButton;
     private javax.swing.JButton SignUpButton;
     private javax.swing.JButton SignoutButton;
@@ -1015,11 +1031,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
