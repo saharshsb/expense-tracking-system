@@ -6,6 +6,12 @@ package ets;
 
 import dbmsconnection.*;
 import java.awt.Insets;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author sahar
@@ -15,9 +21,11 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    
     public Login() {
         initComponents();
         Not_a_valid_user.setVisible(false);
+        
     }
 
     /**
@@ -476,25 +484,28 @@ public class Login extends javax.swing.JFrame {
         LogPanel.setOpaque(false);
         LogPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        TablePanel.setForeground(new java.awt.Color(255, 0, 0));
         TablePanel.setOpaque(false);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "Type", "Category", "Name", "Amount", "Date"
+                "Transaction_id", "Type", "Category", "Name", "Amount", "Date"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(jTable1);
@@ -503,7 +514,9 @@ public class Login extends javax.swing.JFrame {
         TablePanel.setLayout(TablePanelLayout);
         TablePanelLayout.setHorizontalGroup(
             TablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablePanelLayout.createSequentialGroup()
+                .addGap(0, 14, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         TablePanelLayout.setVerticalGroup(
             TablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -952,6 +965,7 @@ public class Login extends javax.swing.JFrame {
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
         int found=0;
         String Username_string=UsernameField.getText();
+        LoginUsernameField.setText(Username_string);
         String Name_string=NameField.getText();
         String Email_string=EmailField.getText();
         String Password_string=new String(PasswordField.getPassword());
@@ -1005,9 +1019,26 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_HomeButtonActionPerformed
 
     private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogButtonActionPerformed
+        String Username_string=LoginUsernameField.getText();
         LogPanel.setVisible(true);
         HomePanel.setVisible(false);
         SettingsPanel.setVisible(false);
+        DefaultTableModel dt=(DefaultTableModel)jTable1.getModel();
+        try{
+           Class.forName("com.mysql.cj.jdbc.Driver");  
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+
+           Statement stmt=con.createStatement();
+           ResultSet rs= stmt.executeQuery("select * from transactions where username='"+Username_string+"'");
+           while(rs.next()){
+                String []toadd={rs.getString(1),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7)};
+                dt.addRow(toadd);
+            }
+        }
+        catch(ClassNotFoundException | SQLException e){
+            System.out.println("Connection not established"+e);
+                    
+        }
     }//GEN-LAST:event_LogButtonActionPerformed
 
     private void AddInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddInfoButtonActionPerformed
@@ -1017,13 +1048,49 @@ public class Login extends javax.swing.JFrame {
         String Amount_string=AmountField.getText();
         String Date_string=ExpDateField.getText();
         String Username_string=LoginUsernameField.getText();
-        DBMS_ADD.dbms_add_transact(Username_string,type_string,Category_string,Name_string,Amount_string,Date_string);  
+        DBMS_ADD.dbms_add_transact(Username_string,type_string,Category_string,Name_string,Amount_string,Date_string);
+        DefaultTableModel dt=(DefaultTableModel)jTable1.getModel();
+        dt.setRowCount(0);
+        try{
+           Class.forName("com.mysql.cj.jdbc.Driver");  
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+
+           Statement stmt=con.createStatement();
+           ResultSet rs= stmt.executeQuery("select * from transactions where username='"+Username_string+"'");
+           while(rs.next()){
+                String []toadd={rs.getString(1),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7)};
+                dt.addRow(toadd);
+            }
+        }
+        catch(ClassNotFoundException | SQLException e){
+            System.out.println("Connection not established"+e);
+                    
+        }
     }//GEN-LAST:event_AddInfoButtonActionPerformed
 
     private void DeleteInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteInfoButtonActionPerformed
-        
-        
-        
+      DefaultTableModel dt=(DefaultTableModel)jTable1.getModel();
+      int index=jTable1.getSelectedRow();
+      String Username_string=LoginUsernameField.getText();
+      String Transaction_id;
+      Transaction_id=dt.getValueAt(index,0).toString();
+      DBMS_DELETE.dbms_delete_tab(Transaction_id);
+      dt.setRowCount(0);
+        try{
+           Class.forName("com.mysql.cj.jdbc.Driver");  
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+
+           Statement stmt=con.createStatement();
+           ResultSet rs= stmt.executeQuery("select * from transactions where username='"+Username_string+"'");
+           while(rs.next()){
+                String []toadd={rs.getString(1),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7)};
+                dt.addRow(toadd);
+            }
+        }
+        catch(ClassNotFoundException | SQLException e){
+            System.out.println("Connection not established"+e);
+                    
+        }
     }//GEN-LAST:event_DeleteInfoButtonActionPerformed
 
     private void EditInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditInfoButtonActionPerformed
@@ -1043,6 +1110,18 @@ public class Login extends javax.swing.JFrame {
     private void ChangePasswordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangePasswordButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ChangePasswordButtonActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+      DefaultTableModel dt=(DefaultTableModel)jTable1.getModel();
+      int index=jTable1.getSelectedRow();
+      String Transaction_id;
+      Transaction_id=dt.getValueAt(index,0).toString();
+      TypeField.setText(dt.getValueAt(index,1).toString());
+      CategoryField.setText(dt.getValueAt(index,2).toString());
+      ExpNameField.setText(dt.getValueAt(index,3).toString());
+      AmountField.setText(dt.getValueAt(index,4).toString());
+      ExpDateField.setText(dt.getValueAt(index,5).toString());
+    }//GEN-LAST:event_jTable1MouseClicked
 
 
     /**

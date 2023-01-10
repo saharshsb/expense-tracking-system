@@ -26,10 +26,10 @@ public class DBMS_EXPENSE {
            LocalDate currentDate= LocalDate.now();
            int month = currentDate.getMonthValue();
            System.out.println(month);
-           ResultSet rs= stmt.executeQuery("select sum(transaction_amount) from transaction where Username='"+Username+"' and type='E' and extract(month from transaction_date)=extract(month from CURDATE())");
+           ResultSet rs= stmt.executeQuery("select sum(amount) from transactions where Username='"+Username+"' and type='E' and extract(month from transaction_date)=extract(month from CURDATE())");
            while(rs.next()){
                System.out.println("Entered");
-               return rs.getInt("SUM(TRANSACTION_AMOUNT)");
+               return rs.getInt("SUM(AMOUNT)");
            }
         }
         catch(ClassNotFoundException | SQLException e){
@@ -49,10 +49,10 @@ public class DBMS_EXPENSE {
            LocalDate currentDate= LocalDate.now();
            int month = currentDate.getMonthValue();
            System.out.println(month);
-           ResultSet rs= stmt.executeQuery("select sum(transaction_amount) from transaction where Username='"+Username+"' and type='I' and extract(month from Transaction_date)=extract(month from CURDATE())");
+           ResultSet rs= stmt.executeQuery("select sum(amount) from transactions where Username='"+Username+"' and type='I' and extract(month from Transaction_date)=extract(month from CURDATE())");
            while(rs.next()){
                System.out.println("Entered");
-               return rs.getInt("SUM(TRANSACTION_AMOUNT)");
+               return rs.getInt("SUM(AMOUNT)");
            }
         }
         catch(ClassNotFoundException | SQLException e){
