@@ -35,7 +35,7 @@ public class DBMS_ADD {
            rs.next();
            int transaction=rs.getInt("TRANSACTION_ID");
            int j=stmt.executeUpdate("Update transact set transaction_id=transaction_id+1");
-           int i=stmt.executeUpdate("Insert into transactions values("+transaction+",'"+Username+"','"+type+"','"+Category+"','"+Name+"',"+Amount+",'"+date+"')");
+           int i=stmt.executeUpdate("Insert into transactions values("+transaction+",'"+Username+"','"+type.toUpperCase()+"','"+Category+"','"+Name+"',"+Amount+",'"+date+"')");
         } catch (Exception ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
