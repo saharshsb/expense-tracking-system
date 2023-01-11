@@ -19,7 +19,7 @@ public class DBMS_PASSWORD_CHECK {
         int found=0;
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");  
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ets","root","Arrive#1");
 
            Statement stmt=con.createStatement();
            ResultSet rs= stmt.executeQuery("select * from user");
@@ -40,7 +40,7 @@ public class DBMS_PASSWORD_CHECK {
    public static void dbms_chng_pass(String Username,String password){
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");  
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ets","root","Arrive#1");
 
            Statement stmt=con.createStatement();
            int i= stmt.executeUpdate("Update user set password='"+password+"' where username='"+Username+"'");

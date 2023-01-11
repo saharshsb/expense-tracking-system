@@ -21,10 +21,10 @@ public class DBMS_UPDATE {
             LocalDate date = LocalDate.parse(Date_String);
             int Amount=Integer.parseInt(Amount_String);
             Class.forName("com.mysql.cj.jdbc.Driver");  
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ets","root","Arrive#1");
 
            Statement stmt=con.createStatement();
-           int i= stmt.executeUpdate("Update transactions set type='"+type.toUpperCase()+"', Category='"+Category+"', name='"+Name+"', amount="+Amount+", transaction_date='"+date+"' where transaction_id="+Integer.parseInt(Transaction_id));
+           int i= stmt.executeUpdate("Update transactions set type='"+type.toUpperCase()+"', Category='"+Category.toUpperCase()+"', name='"+Name.toUpperCase()+"', amount="+Amount+", transaction_date='"+date+"' where transaction_id="+Integer.parseInt(Transaction_id));
            
         }
         catch(ClassNotFoundException | SQLException e){

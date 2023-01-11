@@ -27,15 +27,15 @@ public class DBMS_ADD {
         try {        
             LocalDate date = LocalDate.parse(Date_String);
             int Amount=Integer.parseInt(Amount_String);
-            Class.forName("com.mysql.jdbc.Driver");  
+            Class.forName("com.mysql.cj.jdbc.Driver");  
            Connection con = DriverManager.getConnection(  
-                    "jdbc:mysql://localhost:3306/expense_tracking","root","Pranav@3404");
+                    "jdbc:mysql://localhost:3306/ets","root","Arrive#1");
            Statement stmt=con.createStatement();
            ResultSet rs=stmt.executeQuery("Select * from transact");
            rs.next();
            int transaction=rs.getInt("TRANSACTION_ID");
            int j=stmt.executeUpdate("Update transact set transaction_id=transaction_id+1");
-           int i=stmt.executeUpdate("Insert into transactions values("+transaction+",'"+Username+"','"+type.toUpperCase()+"','"+Category+"','"+Name+"',"+Amount+",'"+date+"')");
+           int i=stmt.executeUpdate("Insert into transactions values("+transaction+",'"+Username+"','"+type.toUpperCase()+"','"+Category.toUpperCase()+"','"+Name.toUpperCase()+"',"+Amount+",'"+date+"')");
         } catch (Exception ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
