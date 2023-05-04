@@ -1,4 +1,4 @@
-# ets
+# Expense Tracking System
 Expense Tracking System, as a part of the DBMS Mini Project.
 Problem Statement 
 Nowadays, people earn both active and passive income, but are unaware of how to manage their 
